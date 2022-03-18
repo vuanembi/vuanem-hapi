@@ -11,8 +11,8 @@ TS_FORMAT = "%Y%m%d"
 def parse_dt(timeframe: tuple[datetime, datetime]) -> dict[str, str]:
     start, end = timeframe
     return {
-        "from": start.strftime(TS_FORMAT),
-        "to": end.strftime(TS_FORMAT),
+        "from_date": start.strftime(TS_FORMAT),
+        "to_date": end.strftime(TS_FORMAT),
     }
 
 
