@@ -26,6 +26,7 @@ def get(uri: str):
                 "token": os.getenv("HAPI_TOKEN"),
             },
         ) as r:
+            r.raise_for_status()
             res = r.json()
         data = res["data"]
         return data if data else []
