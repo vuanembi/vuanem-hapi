@@ -3,9 +3,10 @@ import pytest
 from hapi.hapi import services
 from hapi.hapi_service import pipeline_service
 from hapi.hapi_controller import hapi_controller
+from tasks.tasks_service import tasks_service
 
 
-@pytest.fixture( # type: ignore
+@pytest.fixture(  # type: ignore
     params=services.values(),
     ids=services.keys(),
 )
@@ -41,6 +42,17 @@ class TestPipeline:
         res = hapi_controller(
             {
                 "resource": resource.name,
+                "start": timeframe[0],
+                "end": timeframe[1],
+            }
+        )
+        res
+
+
+class TestTasks:
+    def test_service(self, timeframe):
+        res = tasks_service(
+            {
                 "start": timeframe[0],
                 "end": timeframe[1],
             }

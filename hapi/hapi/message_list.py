@@ -34,7 +34,7 @@ message_list = Resource(
     ],
     [
         {"name": "create_date", "type": "TIMESTAMP"},
-        {"name": "create_uid", "type": "STRING"},
+        {"name": "create_uid", "type": "NUMERIC"},
         {"name": "data", "type": "STRING"},
         {"name": "error_message", "type": "STRING"},
         {"name": "id", "type": "NUMERIC"},
@@ -51,7 +51,7 @@ message_list = Resource(
         {"name": "template_code", "type": "STRING"},
         {"name": "template_content", "type": "STRING"},
         {"name": "write_date", "type": "TIMESTAMP"},
-        {"name": "write_uid", "type": "STRING"},
+        {"name": "write_uid", "type": "NUMERIC"},
     ],
     params_fn=compose(
         parse_dt,
