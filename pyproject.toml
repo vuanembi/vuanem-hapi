@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "vuanem-hapi-sms"
+version = "0.1.0"
+description = ""
+authors = ["HM <hieumdd@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "~3.9"
+requests = "^2.27.1"
+google-cloud-bigquery = "^2.34.2"
+python-dateutil = "^2.8.2"
+compose = "^1.2.8"
+
+[tool.poetry.dev-dependencies]
+black = "^22.1.0"
+pytest = "^7.1.1"
+mypy = "^0.941"
+types-requests = "^2.27.13"
+types-python-dateutil = "^2.8.10"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
