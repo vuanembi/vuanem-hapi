@@ -27,6 +27,7 @@ def get(uri: str):
             },
         ) as r:
             res = r.json()
-        return res["data"]
+        data = res["data"]
+        return data if data else []
 
     return _get

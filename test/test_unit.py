@@ -5,7 +5,7 @@ from hapi.hapi_service import pipeline_service
 from hapi.hapi_controller import hapi_controller
 
 
-@pytest.fixture( # type: ignore
+@pytest.fixture(  # type: ignore
     params=services.values(),
     ids=services.keys(),
 )
