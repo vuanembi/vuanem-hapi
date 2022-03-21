@@ -5,6 +5,6 @@ services = {
     for i in [
         message_list.message_list,
         campaign_list.campaign_list,
-        # upload_list.upload_list,
+        upload_list.upload_list,
     ]
 }
