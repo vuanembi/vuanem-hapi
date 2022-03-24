@@ -7,7 +7,7 @@ def main(request):
 
     print(data)
 
-    if "resource" in data:
+    if "table" in data:
         response = hapi_controller(data)
     elif "tasks" in data:
         response = tasks_service(data)
